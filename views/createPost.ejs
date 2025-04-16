@@ -1,0 +1,39 @@
+<%- include ("partials/header") %>
+<%- include ("partials/sideMenu") %>
+
+
+<main class="container">
+
+
+<h1 class="createPosth1">Create New Blog</h1>
+
+<div class="form-container">
+    <form action="submit" method="POST">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="blogTitle" placeholder="Blog Title.." required>
+
+      <label for="Category">Category</label>
+      <input type="text" id="category" name="blogCategory" placeholder="Blog category" required>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="India">India</option>
+        <option value="australia">Australia</option>
+        <option value="japan">Japan</option>
+      </select>
+
+      <label for="blog">Blog</label>
+      <textarea id="blog" name="blogBlog" placeholder="Write blog.." style="height:150px" required></textarea>
+
+
+      <div class="button-container">
+        <input type="submit" value="Submit" name="submit">
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+<%- include ("partials/footer") %>

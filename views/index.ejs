@@ -1,0 +1,38 @@
+<%- include ("partials/header") %>
+
+
+<%- include ("partials/sideMenu") %>
+<main class="container">
+
+
+<div class="blogBox">
+   
+    <% if (posts.length > 0) { %>
+        <% posts.forEach(post => { %>
+            <div class="blog-posts">
+                <h1>Title: <%= post.title %></h1>
+                <h3>Category: <%= post.category %></h3>
+                <p><%= post.blog %></p>
+                <form action="/delete/<%= post.id %> " method="POST" style = "display: inline;">
+                    <button type="submit">Delete</button>
+                </form>
+    
+                <form action="/edit/<%= post.id %>" method="Get" style = "display: inline;">
+                    <button type="submit">Edit</button>
+                </form>
+            </div>
+        <% }) %>
+        <% } else { %>
+            <p>No blog posts yet.</p>
+    <% } %>
+          
+</div>
+
+
+
+
+
+
+
+
+<%- include ("partials/footer") %>
